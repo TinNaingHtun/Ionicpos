@@ -1,0 +1,94 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-button slot="start" class="back" color="white" (click)="back()">
+            <ion-icon name="chevron-back-outline"></ion-icon>
+        </ion-button>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-card>
+        <ion-row>
+            <ion-col size="4">
+                <ion-text>Date</ion-text>
+            </ion-col>
+            <ion-col size="8">
+                <ion-text>11/11/2020</ion-text>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col size="4">
+                <ion-text>Invoice No.</ion-text>
+            </ion-col>
+            <ion-col size="8">
+                <ion-text>INV-1</ion-text>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col size="4">
+                <ion-text>Terminal</ion-text>
+            </ion-col>
+            <ion-col size="8">
+                <ion-text>SCM's Terminal</ion-text>
+            </ion-col>
+        </ion-row>
+    </ion-card>
+    <div class="item-price ion-padding">
+        <ion-row *ngFor="let data of totalData">
+            <ion-col size="2">
+                <ion-text class="qty">{{data.qty}}</ion-text>
+            </ion-col>
+
+            <ion-col size="6">
+                <ion-text>
+                    <h3 class="ion-no-margin title">{{data.name}}</h3>
+                </ion-text>
+            </ion-col>
+
+            <ion-col size="4" style="text-align: right;">
+                <ion-text class="price">MMK {{data.total}}</ion-text>
+            </ion-col>
+        </ion-row>
+    </div>
+    <div class="total">
+        <ion-row>
+            <ion-col size="8">
+                <ion-text>Total</ion-text>
+            </ion-col>
+            <ion-col size="4" style="text-align: right;">
+                <ion-text class="price">MMK {{totalBalance}}</ion-text>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col size="8">
+                <ion-text>Promotion</ion-text>
+            </ion-col>
+            <ion-col size="4" style="text-align: right;">
+                <ion-text class="price">MMk {{promotion}}</ion-text>
+            </ion-col>
+        </ion-row>
+        <ion-row class="tax">
+            <ion-col size="8">
+                <ion-text>GST</ion-text>
+            </ion-col>
+            <ion-col size="4" style="text-align: right;">
+                <ion-text class="price">MMK {{tax}}</ion-text>
+            </ion-col>
+        </ion-row>
+    </div>
+    <div class="total-balance ion-padding">
+        <ion-row>
+            <ion-col size="8">
+                <ion-text>Total <span class="small-text">Including Tax</span></ion-text>
+            </ion-col>
+            <ion-col size="4" style="text-align: right;">
+                <ion-text class="price">MMK {{totalResult}}</ion-text>
+            </ion-col>
+        </ion-row>
+    </div>
+</ion-content>
+<ion-footer color="primary">
+    <ion-toolbar>
+        <ion-button expand="full" class="save ion-text-center">Save</ion-button>
+    </ion-toolbar>
+</ion-footer>

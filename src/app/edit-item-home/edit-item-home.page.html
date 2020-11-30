@@ -1,0 +1,50 @@
+<ion-content>
+    <form [formGroup]="addItemToCart">
+        <ion-list>
+            <div class="scan-input">
+                <ion-item lines="none">
+                    <ion-label color="primary" position="stacked">
+                        Code
+                    </ion-label>
+                    <ion-input type="text" [(ngModel)]="saleItem.code" formControlName="code" class="ion-padding-start"></ion-input>
+                </ion-item>
+                <ion-button color="primary" (click)="scan()">Scan</ion-button>
+            </div>
+            <ion-item lines="none">
+                <ion-label color="primary" position="stacked">
+                    Item Name
+                </ion-label>
+                <ion-input type="text" [(ngModel)]="saleItem.name" formControlName="name" class="ion-padding-start"></ion-input>
+
+            </ion-item>
+            <ion-item lines="none">
+                <ion-label color="primary" position="stacked">
+                    Qty
+                </ion-label>
+                <ion-input type="text" [(ngModel)]="saleItem.qty" formControlName="qty" (ionChange)="qtyChange()" class="ion-padding-start"></ion-input>
+
+            </ion-item>
+            <ion-item lines="none">
+                <ion-label color="primary" position="stacked">
+                    Price
+                </ion-label>
+                <ion-input type="text" [(ngModel)]="saleItem.price" formControlName="price" class="ion-padding-start"></ion-input>
+
+            </ion-item>
+
+        </ion-list>
+        <ion-row class="d-flex ion-padding">
+            <ion-col size="12">Totals : {{saleItem.total}} KS</ion-col>
+        </ion-row>
+        <div class="btn-group">
+            <ion-button class='cancel cancel-btn' (click)="cancel()">
+                Cancel
+            </ion-button>
+
+            <ion-button type="submit" ion-button class='addItem' (click)="editItemToHome()">
+                Ok
+            </ion-button>
+        </div>
+    </form>
+
+</ion-content>

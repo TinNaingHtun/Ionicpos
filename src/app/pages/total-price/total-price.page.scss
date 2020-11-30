@@ -1,0 +1,85 @@
+ion-footer {
+    text-align: center;
+}
+
+ion-card {
+    --background: #EFF4F9;
+    ion-text {
+        color: #000000;
+    }
+}
+
+ion-row {
+    width: 100%;
+}
+
+ion-text {
+    width: 100%;
+    font-size: 12px;
+    font-weight: bold;
+    h3 {
+        font-size: 12px;
+        font-weight: bold;
+    }
+}
+
+ion-list {
+    padding: 0px 10px;
+    ion-item {
+        width: 100%;
+    }
+}
+
+.item-inner {
+    padding-inline-end: 0;
+}
+
+.qty {
+    border: 1px solid #B2B2B2;
+    margin-bottom: 10px;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.title {
+    color: #1F63AE;
+    padding-top: 3px;
+}
+
+.price {
+    color: #B2B2B2;
+    text-align: right;
+}
+
+.item-price {
+    ion-row {
+        border-bottom: 1px solid #000000;
+        padding: 10px 0px;
+    }
+}
+
+.total {
+    padding: 0px 16px;
+    .tax {
+        border-bottom: 1px solid #000000;
+        padding-bottom: 10px;
+    }
+}
+
+.small-text {
+    color: #636363;
+    font-size: 6px;
+}
+
+ion-footer {
+    ion-toolbar {
+        --background: #1F63AE;
+    }
+}
+
+.save {
+    --background: #1F63AE;
+    color: #ffffff;
+    font-size: 13px;
+    text-transform: uppercase;
+}

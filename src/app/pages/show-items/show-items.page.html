@@ -1,0 +1,32 @@
+<ion-header [translucent]="true">
+    <ion-toolbar>
+        <ion-button slot="start" class="back" color="white" (click)="back()">
+            <ion-icon name="chevron-back-outline" style="font-size: 16px;"></ion-icon>
+        </ion-button>
+        <ion-title>
+            Item Lists
+        </ion-title>
+        <ion-button slot="end" (click)="addItem()" class="addItem" color="white">
+            <ion-label>Add Item</ion-label>
+        </ion-button>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+    <ion-card *ngFor="let data of dbData">
+        <ion-row>
+            <ion-col size="10">
+                <ion-label>
+                    <h2>{{data.name}}</h2>
+                </ion-label>
+                <ion-label class="small-text">{{data.code}}</ion-label>
+                <ion-label>{{data.price}}Ks</ion-label>
+            </ion-col>
+            <ion-col size="2" class="button">
+                <ion-button color="white" (click)="updateItem(data)">
+                    <ion-icon name="ellipsis-vertical-outline" color="dark" style="font-size: 16px;"></ion-icon>
+                </ion-button>
+            </ion-col>
+        </ion-row>
+    </ion-card>
+</ion-content>

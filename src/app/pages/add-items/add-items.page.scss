@@ -1,0 +1,56 @@
+ion-label {
+    padding-bottom: 20px;
+    font-size: 10px;
+}
+
+ion-input {
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    display: block;
+    font-size: 10px;
+}
+
+input[type="number"]::placeholder {
+    text-align: right;
+}
+
+ion-row.d-flex {
+    display: flex;
+    justify-content: space-between;
+    ion-button {
+        width: 100%;
+        border-radius: 8px;
+        outline: none;
+        text-transform: uppercase;
+    }
+}
+
+.cancel {
+    --background: #E5E5E5;
+    color: #000000;
+}
+
+.addItem {
+    --background: #3880ff;
+    color: #ffffff;
+}
+
+.error {
+    color: rgb(223, 62, 62);
+    font-size: 11px;
+    display: flex;
+    ion-icon {
+        padding-top: 2px;
+        padding-right: 5px;
+    }
+}
+
+.error1 {
+    color: rgb(75, 75, 75);
+    border: 1px solid #ff0000;
+}
+
+.scan {
+    height: 25px;
+    width: 40px;
+}

@@ -1,0 +1,7 @@
+{
+  "name": "pos_mini",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

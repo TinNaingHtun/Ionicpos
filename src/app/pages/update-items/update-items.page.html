@@ -1,0 +1,36 @@
+<ion-content>
+    <form *ngFor="let item of dbData">
+        <ion-list>
+            <ion-item lines="none">
+                <ion-label color="primary" position="stacked"> Code </ion-label>
+                <ion-row style="display: flex;justify-content: space-between;width: 100%;">
+                    <ion-col class="ion-no-padding">
+                        <ion-input type="text" name="code" [(ngModel)]="item.code"></ion-input>
+                    </ion-col>
+                    <ion-col size="3" class="ion-no-padding ion-text-right">
+                        <ion-button (click)="scan()" class="scan">Scan</ion-button>
+                    </ion-col>
+                </ion-row>
+            </ion-item>
+            <ion-item lines="none">
+                <ion-label color="primary" position="stacked"> Item Name </ion-label>
+                <ion-input type="text" name="name" [(ngModel)]="item.name"></ion-input>
+            </ion-item>
+            <ion-item lines="none">
+                <ion-label color="primary" position="stacked"> Price </ion-label>
+                <ion-input type="number" name="price" [(ngModel)]="item.price" placeholder="Ks."></ion-input>
+            </ion-item>
+        </ion-list>
+        <ion-row class="d-flex ion-padding">
+            <ion-col size="4">
+                <ion-button class="cancel" (click)="cancel()">Cancel</ion-button>
+            </ion-col>
+            <ion-col size="4">
+                <ion-button class="delete" (click)="delete(item)">Delete</ion-button>
+            </ion-col>
+            <ion-col size="4">
+                <ion-button class="addItem" (click)="updateItem(item)">Ok</ion-button>
+            </ion-col>
+        </ion-row>
+    </form>
+</ion-content>

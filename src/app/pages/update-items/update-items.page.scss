@@ -1,0 +1,41 @@
+ion-label {
+    padding-bottom: 20px;
+    font-size: 10px;
+}
+
+ion-input {
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    display: block;
+    font-size: 10px;
+}
+
+ion-row.d-flex {
+    display: flex;
+    justify-content: space-between;
+    ion-button {
+        width: 100%;
+        display: inline-block;
+        border-radius: 8px;
+        outline: none;
+        font-size: 11px;
+        text-transform: uppercase;
+    }
+    .cancel {
+        --background: #cccccc;
+        color: #000000;
+    }
+    .addItem {
+        --background: #3880ff;
+        color: #ffffff;
+    }
+    .delete {
+        --background: #707070;
+        color: #000000;
+    }
+}
+
+.scan {
+    height: 25px;
+    width: 40px;
+}
