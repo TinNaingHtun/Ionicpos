@@ -30,17 +30,21 @@
 @import "~@ionic/angular/css/flex-utils.css";
 @import '~animate.css/animate.min.css';
 .modal-wrapper {
-    --height: 50%;
+    --height: 313px;
     --border-radius: 10px;
-    --width: 85%;
+    --width: 328px;
     margin: 0 auto;
     padding: 30px;
 }
 
+ion-input {
+    --padding-start: 10px !important;
+}
+
 ion-header {
     ion-toolbar {
-        --background: var(--ion-color-primary, #428cff);
-        background-color: var(--ion-color-primary, #428cff);
+        --background: #1F63AE;
+        color: #fff;
     }
     ion-title {
         text-align: center;
@@ -54,7 +58,14 @@ ion-button {
 }
 
 .my-modalCss .modal-wrapper {
-    height: 70%;
+    --height: 459px;
+    top: 15%;
+    position: absolute;
+    display: block;
+}
+
+.my-editModalCss .modal-wrapper {
+    height: 73%;
     top: 15%;
     position: absolute;
     display: block;
@@ -63,11 +74,20 @@ ion-button {
 .editText {
     .action-sheet-title {
         color: #1F63AE!important;
+        font-size: 12px;
+    }
+    button:hover {
+        --background: #ECF9FF;
+        color: #1F63AE;
     }
 }
 
 .editIcon {
+    font-size: 14px;
     ion-icon {
         color: #1F63AE!important;
+        width: 17px;
+        height: 17px;
+        font-weight: bold;
     }
 }

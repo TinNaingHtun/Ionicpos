@@ -13,7 +13,7 @@
             <div class="item-upper">
                 <div>
                     <p class="item-bold">{{n+1}} {{item.name}} <small>/{{item.price}}Ks</small> </p>
-                    <small>{{item.code}}</small>
+                    <small class="code">{{item.code}}</small>
                 </div>
                 <ion-button color="white" class="edit-btn" (click)="editSaleItem(item)">
                     <ion-icon name="ellipsis-vertical-outline" color="dark"></ion-icon>
@@ -21,11 +21,11 @@
             </div>
             <div class="item-lower">
                 <div class="item-spec">
-                    <p>Total:</p>
-                    <p class="item-bold">{{item.total}}</p>
+                    <p class="text">Total:</p>
+                    <p class="item-bold">{{item.total}} Ks</p>
                 </div>
                 <div class="item-spec">
-                    <p>Qty:</p>
+                    <p class="text">Qty:</p>
                     <p class="item-bold">{{item.qty}}</p>
                 </div>
             </div>
@@ -38,6 +38,6 @@
 </ion-content>
 <ion-footer>
     <ion-toolbar>
-        <ion-button expand="full" text-center class="save ion-text-center" color="white" (click)="next()">Next</ion-button>
+        <ion-button expand="full" text-center class="next ion-text-center" color="white" (click)="next()">Next</ion-button>
     </ion-toolbar>
 </ion-footer>

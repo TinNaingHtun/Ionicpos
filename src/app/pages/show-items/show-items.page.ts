@@ -56,6 +56,6 @@ export class ShowItemsPage implements OnInit {
     })
   }
   back() {
-    this.navCtrl.navigateBack('home');
+    this.navCtrl.navigateBack('/home');
   }
 }

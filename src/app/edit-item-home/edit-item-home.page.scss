@@ -1,15 +1,30 @@
+.itemNo {
+    margin-left: 16px;
+    padding-top: 10px;
+    color: #1F63AE;
+    font-size: 16px;
+    font-weight: bold;
+}
+
 ion-input {
     margin-top: 15px;
     padding: 5px;
     border: 1px solid #cccccc;
     border-radius: 3px;
     display: block;
+    font-size: 12px;
 }
 
 .scan-input {
     display: flex;
     justify-content: space-between;
     position: relative;
+    ion-item {
+        width: 200px;
+        ion-input {
+            width: 100%;
+        }
+    }
     ion-button {
         align-self: flex-end;
         margin: 0 16px 0 0;
@@ -20,15 +35,39 @@ ion-input {
     color: #1F63AE;
     font-size: 20px;
     text-align: right;
+    font-weight: 600;
 }
 
-.cancel-btn {
-    --background: #E5E5E5;
-    color: #000;
-}
-
-.btn-group {
-    margin: 16px;
+.d-flex {
     display: flex;
     justify-content: space-between;
+    ion-button {
+        width: 100%;
+        display: inline-block;
+        border-radius: 8px;
+        outline: none;
+        font-size: 11px;
+        text-transform: uppercase;
+    }
+    .cancel {
+        --background: #cccccc;
+        color: #000000;
+    }
+    .addItem {
+        --background: #1F63AE;
+        color: #ffffff;
+    }
+    .delete {
+        --background: #707070;
+        color: #000000;
+    }
+}
+
+.scan {
+    margin-top: 15px;
+    height: 31px;
+    width: 40px;
+    font-size: 10px;
+    --background: #1F63AE;
+    color: #ffffff;
 }

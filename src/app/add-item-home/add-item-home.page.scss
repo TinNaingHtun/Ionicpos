@@ -1,9 +1,17 @@
 ion-input {
     margin-top: 15px;
-    padding: 5px;
     border: 1px solid #cccccc;
     border-radius: 3px;
     display: block;
+    padding-inline-start: var(--ion-padding, 16px);
+    font-size: 12px;
+}
+
+.total-price {
+    color: #1F63AE;
+    font-size: 20px;
+    text-align: right;
+    font-weight: 600;
 }
 
 .d-flex {
@@ -22,7 +30,7 @@ ion-input {
         color: #000000;
     }
     .addItem {
-        --background: #3880ff;
+        --background: #1F63AE;
         color: #ffffff;
     }
     .delete {
@@ -37,6 +45,9 @@ ion-button {
 
 .scan {
     margin-top: 15px;
-    height: 33px;
+    height: 31px;
     width: 40px;
+    font-size: 10px;
+    --background: #1F63AE;
+    color: #ffffff;
 }

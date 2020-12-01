@@ -5,7 +5,7 @@ ion-label {
 
 ion-input {
     border: 1px solid #cccccc;
-    border-radius: 5px;
+    border-radius: 3px;
     display: block;
     font-size: 10px;
 }
@@ -26,7 +26,7 @@ ion-row.d-flex {
         color: #000000;
     }
     .addItem {
-        --background: #3880ff;
+        --background: #1F63AE;
         color: #ffffff;
     }
     .delete {
@@ -36,6 +36,10 @@ ion-row.d-flex {
 }
 
 .scan {
-    height: 25px;
+    height: 31px;
     width: 40px;
+    font-size: 10px;
+    margin: 0;
+    --background: #1F63AE;
+    color: #ffffff;
 }

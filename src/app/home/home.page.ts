@@ -31,7 +31,8 @@ export class HomePage implements OnInit {
   ngOnInit() {}
   async showModal(){
     const modal=await this.modalController.create({
-      component:AddItemHomePage
+      component:AddItemHomePage,
+      cssClass: 'my-modalCss',
     });
     modal.onDidDismiss().then(data=>{
       this.buyItemList=this.buyItemService.getItemList();
@@ -39,10 +40,13 @@ export class HomePage implements OnInit {
     })
     return await modal.present();
   }
-  async showEditModal(){
+  async showEditModal(item){
     const modal=await this.modalController.create({
       component:EditItemHomePage,
-      cssClass: 'my-modalCss'
+      cssClass: 'my-modalCss',
+      componentProps: {
+        'items': item
+      }
     });
     modal.onDidDismiss().then(data=>{
       this.buyItemList=this.buyItemService.getItemList();
@@ -62,7 +66,7 @@ export class HomePage implements OnInit {
           icon: 'pencil-outline',
           cssClass: 'editIcon',
           handler: () => {
-             this.showEditModal()
+             this.showEditModal(item)
             }
           },
           {

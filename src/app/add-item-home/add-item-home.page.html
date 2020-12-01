@@ -7,10 +7,10 @@
                 </ion-label>
                 <ion-row style="display: flex;justify-content: space-between;width: 100%;">
                     <ion-col size="9" class="ion-no-padding">
-                        <ion-input type="text" [(ngModel)]="saleItem.code" formControlName="code" class="ion-padding-start"></ion-input>
+                        <ion-input type="text" [(ngModel)]="saleItem.code" formControlName="code" class="ion-no-padding"></ion-input>
                     </ion-col>
                     <ion-col size="3" class="ion-no-padding ion-text-right">
-                        <ion-button color="primary" (click)="scan()" class="scan">Scan</ion-button>
+                        <ion-button (click)="scan()" class="scan">Scan</ion-button>
                     </ion-col>
                 </ion-row>
             </ion-item>
@@ -37,7 +37,7 @@
             </ion-item>
 
         </ion-list>
-        <ion-row class="d-flex ion-padding">
+        <ion-row class="d-flex ion-padding total-price">
             <ion-col size="12">Totals : {{saleItem.total}} KS</ion-col>
         </ion-row>
         <ion-row class="d-flex ion-padding">

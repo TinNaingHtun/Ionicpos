@@ -4,7 +4,7 @@ import { FormControl, FormBuilder, FormGroup, NgForm, Validators } from '@angula
 import {BuyItemService} from '../services/but-item.service';
 import { BarcodeScanner,BarcodeScannerOptions} from "@ionic-native/barcode-scanner/ngx";
 import {StorageService,Item} from '../services/storage.service';
-
+import { NavParams } from '@ionic/angular';
 @Component({
   selector: 'app-edit-item-home',
   templateUrl: './edit-item-home.page.html',
@@ -23,14 +23,25 @@ export class EditItemHomePage implements OnInit {
   options: BarcodeScannerOptions;
   buyItemList = [];
   buyItem;
-  localItems:Item[]=[];
+  localItems: Item[] = [];
+  itemIndex;
   constructor(
     public modalController:ModalController,
     private formBuilder:FormBuilder,
     private barcodeScanner: BarcodeScanner,
     private storageService:StorageService,
-    private buyItemService:BuyItemService
-  ) { }
+    private buyItemService:BuyItemService,
+    public  navParams:NavParams
+  ) {
+    let items=navParams.get('items');
+    console.log(items);
+    this.saleItem.code=items.code;
+    this.saleItem.name=items.name;
+    this.saleItem.price=items.price;
+    this.saleItem.qty=items.qty;
+    this.saleItem.total=items.total;
+    console.log(this.saleItem);
+   }
 
   ngOnInit() {
     this.addItemToCart=this.formBuilder.group({
@@ -49,8 +60,9 @@ export class EditItemHomePage implements OnInit {
     });
     this.storageService.getItemdata().then(res=>{
       this.localItems=this.localItems.concat(res) ; 
-      console.log(this.localItems);
     });
+    this.itemIndex= this.getItemIndex(this.saleItem);
+      console.log(this.itemIndex);
   }
   public closeModal() {
     this.modalController.dismiss({
@@ -106,5 +118,11 @@ export class EditItemHomePage implements OnInit {
     else{
       console.log("Not");
     }
+  }
+  getItemIndex(item){
+    this.buyItemList= this.buyItemService.getItemList();
+    console.log(this.buyItemList);
+    console.log(item);
+    return this.buyItemList.findIndex((i)=>i.code ==item.code);
   }
 }

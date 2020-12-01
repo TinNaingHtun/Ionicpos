@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { Platform } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
+import { Router,Event, NavigationStart } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -38,9 +39,17 @@ export class AppComponent implements OnInit {
   constructor(
     private platform: Platform,
     private splashScreen: SplashScreen,
-    private statusBar: StatusBar
+    private statusBar: StatusBar,
+    private router: Router,
   ) {
     this.initializeApp();
+    this.router.events.subscribe((event:Event) => {
+      if(event instanceof NavigationStart){
+        const path = 'home';
+        this.selectedIndex = this.appPages.findIndex(page => page.title.toLowerCase() === path.toLowerCase());
+        console.log(this.selectedIndex);
+      }
+    })
   }
 
   initializeApp() {
@@ -55,5 +64,6 @@ export class AppComponent implements OnInit {
     if (path !== undefined) {
       this.selectedIndex = this.appPages.findIndex(page => page.title.toLowerCase() === path.toLowerCase());
     }
+
   }
 }
