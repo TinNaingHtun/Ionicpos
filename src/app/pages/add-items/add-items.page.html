@@ -15,24 +15,12 @@
                 </ion-row>
             </ion-item>
 
-            <!-- <ion-item lines="none" *ngIf="(addForm.get('code').hasError('required') ) && addForm.get('code').touched">
-                <div color="danger" class="error" *ngIf="addForm.get('code').hasError('required') && addForm.get('code').touched">
-                    <ion-icon name="information-circle-outline"></ion-icon>Required code
-                </div>
-            </ion-item> -->
-
             <ion-item lines="none">
                 <ion-label color="primary" position="stacked">
                     Item Name
                 </ion-label>
                 <ion-input type="text" [(ngModel)]="newItem.name" formControlName="name" [class.error1]="!addForm.controls.name.valid && addForm.controls.name.dirty"></ion-input>
             </ion-item>
-
-            <!-- <ion-item lines="none" *ngIf="(addForm.get('name').hasError('required') ) && addForm.get('name').touched">
-                <div color="danger" class="error" *ngIf="addForm.get('name').hasError('required') && addForm.get('name').touched">
-                    <ion-icon name="information-circle-outline"></ion-icon>Required item name
-                </div>
-            </ion-item> -->
 
 
             <ion-item lines="none">
@@ -41,11 +29,6 @@
                 </ion-label>
                 <ion-input type="number" [(ngModel)]="newItem.price" formControlName="price" placeholder="Ks." [class.error1]="!addForm.controls.price.valid && addForm.controls.price.dirty"></ion-input>
             </ion-item>
-            <!-- <ion-item lines="none" *ngIf="(addForm.get('price').hasError('required') ) && addForm.get('price').touched">
-                <div color="danger" class="error" *ngIf="addForm.get('price').hasError('required') && addForm.get('price').touched">
-                    <ion-icon name="information-circle-outline"></ion-icon>Required price
-                </div>
-            </ion-item> -->
 
 
         </ion-list>

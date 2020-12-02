@@ -82,8 +82,6 @@ export class EditItemHomePage implements OnInit {
         console.log(this.scanData);
         this.buyItem = this.doesItemExit(this.scanData);
         if (this.buyItem) {
-          // this.buyItemList.push(this.buyItem);
-          // this.buyItemService.addItemList(this.buyItem);
           this.addItem(this.buyItem.code,this.buyItem.name,this.buyItem.price);
           
         }
