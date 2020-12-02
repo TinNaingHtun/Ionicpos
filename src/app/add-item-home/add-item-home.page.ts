@@ -99,8 +99,19 @@ export class AddItemHomePage implements OnInit {
   qtyChange(){
       if(Number.isInteger(parseInt(this.saleItem.qty))){
         this.saleItem.total=parseInt(this.saleItem.qty) * parseInt(this.saleItem.price);
+        if(Number.isNaN(this.saleItem.total)){
+          this.saleItem.total=0;
+        }
       }
     console.log(this.saleItem);
+  }
+  priceChange(){
+    if(Number.isInteger(parseInt(this.saleItem.price))){
+      this.saleItem.total=parseInt(this.saleItem.qty) * parseInt(this.saleItem.price);
+      if(Number.isNaN(this.saleItem.total)){
+        this.saleItem.total=0;
+      }
+    }
   }
   addItemToHome(){
     if(this.saleItem.code && this.saleItem.qty && this.saleItem.name && this.saleItem.price){
