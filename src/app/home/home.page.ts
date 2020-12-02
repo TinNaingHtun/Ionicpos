@@ -8,7 +8,6 @@ import {
   BarcodeScanner,
   BarcodeScannerOptions,
 } from "@ionic-native/barcode-scanner/ngx";
-import { ItemsListsPage } from "../items-lists/items-lists.page";
 import { NavController } from "@ionic/angular";
 @Component({
   selector: "app-home",
