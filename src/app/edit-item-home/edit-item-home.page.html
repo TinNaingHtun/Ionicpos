@@ -31,7 +31,7 @@
                 <ion-label color="primary" position="stacked">
                     Price
                 </ion-label>
-                <ion-input type="text" [(ngModel)]="saleItem.price" formControlName="price" class="ion-padding-start"></ion-input>
+                <ion-input type="text" [(ngModel)]="saleItem.price" formControlName="price" (ionChange)="priceChange()" class="ion-padding-start"></ion-input>
 
             </ion-item>
 
