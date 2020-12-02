@@ -1,13 +1,13 @@
 ion-label {
     padding-bottom: 20px;
-    font-size: 10px;
+    font-size: 12px;
 }
 
 ion-input {
     border: 1px solid #cccccc;
     border-radius: 3px;
     display: block;
-    font-size: 10px;
+    font-size: 12px;
 }
 
 input[type="number"]::placeholder {
@@ -22,7 +22,7 @@ ion-row.d-flex {
         border-radius: 8px;
         outline: none;
         text-transform: uppercase;
-        font-size: 12px;
+        font-size: 14px;
     }
 }
 
@@ -38,7 +38,7 @@ ion-row.d-flex {
 
 .error {
     color: rgb(223, 62, 62);
-    font-size: 11px;
+    font-size: 13px;
     display: flex;
     ion-icon {
         padding-top: 2px;
@@ -53,7 +53,7 @@ ion-row.d-flex {
 .scan {
     height: 31px;
     width: 40px;
-    font-size: 10px;
+    font-size: 12px;
     margin: 0;
     --background: #1F63AE;
     color: #ffffff;

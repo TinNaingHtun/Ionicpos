@@ -1,13 +1,13 @@
 ion-label {
     padding-bottom: 20px;
-    font-size: 10px;
+    font-size: 12px;
 }
 
 ion-input {
     border: 1px solid #cccccc;
     border-radius: 3px;
     display: block;
-    font-size: 10px;
+    font-size: 12px;
 }
 
 ion-row.d-flex {
@@ -18,7 +18,7 @@ ion-row.d-flex {
         display: inline-block;
         border-radius: 8px;
         outline: none;
-        font-size: 11px;
+        font-size: 13px;
         text-transform: uppercase;
     }
     .cancel {
@@ -38,7 +38,7 @@ ion-row.d-flex {
 .scan {
     height: 31px;
     width: 40px;
-    font-size: 10px;
+    font-size: 12px;
     margin: 0;
     --background: #1F63AE;
     color: #ffffff;

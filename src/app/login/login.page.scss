@@ -1,57 +1,68 @@
-.login-form{
+.login-form {
     display: flex;
     flex-direction: column;
     align-items: center;
     transform: translateY(-10%);
     background-color: #BCD1E7;
     border-radius: 20px;
-    padding:30px;
+    padding: 30px;
 }
-ion-grid{
+
+ion-grid {
     display: flex;
     justify-content: center;
     height: 100%;
 }
-ion-label{
-    font-size: 10px;
+
+ion-label {
+    font-size: 12px;
     align-self: start;
     padding-left: 2px;
     color: #1F63AE;
 }
-ion-input{
+
+ion-input {
     border: 1px solid #CCCCCC;
     margin: 10px 0 0 0;
     background-color: #fff;
     border-radius: 5px;
 }
-p{
+
+p {
     color: #0E4889;
 }
-ion-item{
+
+ion-item {
     border: none;
 }
-ion-content{
+
+ion-content {
     --background: url('../../assets/img/loginBg.png');
 }
-ion-button{
+
+ion-button {
     margin-top: 20px;
     text-align: center;
     width: 80%;
     align-self: center;
 }
-.dangerBtn{
-    --background:#ff4961;
+
+.dangerBtn {
+    --background: #ff4961;
 }
-.blueBtn{
-    --background:#1F63AE;
+
+.blueBtn {
+    --background: #1F63AE;
 }
-.error{
+
+.error {
     color: red;
-    font-size: 8px;
+    font-size: 10px;
     margin-top: -4px;
     align-self: center;
 }
-.login-form-input{
+
+.login-form-input {
     display: flex;
     flex-direction: column;
 }

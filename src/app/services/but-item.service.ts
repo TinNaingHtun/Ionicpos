@@ -20,4 +20,7 @@ export class BuyItemService {
     let index=this.itemList.findIndex(i=>i.code == item.code);
     this.itemList[index]=item;
   }
+  clearItemList(){
+    return this.itemList=[];
+  }
 }

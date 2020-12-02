@@ -9,6 +9,10 @@ import {
   BarcodeScannerOptions,
 } from "@ionic-native/barcode-scanner/ngx";
 import { NavController } from "@ionic/angular";
+import { AlertController } from '@ionic/angular';
+
+
+
 @Component({
   selector: "app-home",
   templateUrl: "./home.page.html",
@@ -25,6 +29,7 @@ export class HomePage implements OnInit {
     private buyItemService: BuyItemService,
     private navCtrl: NavController,
     private actionSheetController: ActionSheetController,
+    private alertCtrl: AlertController
   ) { }
 
   ngOnInit() {}
@@ -87,6 +92,31 @@ export class HomePage implements OnInit {
   }
   next() {
     this.navCtrl.navigateForward('total-price');
+  }
+
+  async handleClear(){
+   
+    let alert = await this.alertCtrl.create({
+      header: 'Clear All',
+      message: 'Do you want to clear all this items?',
+      buttons: [
+        {
+          text: 'Cancel',
+          role: 'cancel',
+          handler: () => {
+            this.alertCtrl.dismiss();
+          }
+        },
+        {
+          text: 'Clear',
+          handler: () => {
+            this.buyItemService.clearItemList();
+            this.buyItemList=this.buyItemService.getItemList();
+          }
+        }
+      ]
+    });
+     await alert.present();
   }
   
 }

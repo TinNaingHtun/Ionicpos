@@ -15,10 +15,10 @@ ion-row {
 
 ion-text {
     width: 100%;
-    font-size: 12px;
+    font-size: 14px;
     font-weight: bold;
     h3 {
-        font-size: 12px;
+        font-size: 14px;
         font-weight: bold;
     }
 }
@@ -39,6 +39,7 @@ ion-list {
     margin-bottom: 10px;
     padding: 5px 10px;
     border-radius: 5px;
+    font-size: 12px;
 }
 
 .title {
@@ -68,7 +69,7 @@ ion-list {
 
 .small-text {
     color: #636363;
-    font-size: 6px;
+    font-size: 8px;
 }
 
 ion-footer {

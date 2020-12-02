@@ -1,15 +1,16 @@
 ion-card {
     --background: #ECF9FF;
+    padding: 5px;
     .small-text {
-        font-size: 8px;
+        font-size: 10px;
         padding: 5px 0px;
     }
     ion-label {
         display: block;
-        font-size: 12px;
+        font-size: 14px;
         color: #707070;
         h2 {
-            font-size: 12px;
+            font-size: 14px;
         }
     }
 }
@@ -21,11 +22,11 @@ ion-card {
 }
 
 ion-title {
-    font-size: 13px;
+    font-size: 15px;
 }
 
 ion-button {
     ion-label {
-        font-size: 10px;
+        font-size: 12px;
     }
 }
